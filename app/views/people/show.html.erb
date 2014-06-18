@@ -6,14 +6,21 @@
 </p>
 
 <ul>
-<% @person.schools.each do |school| %>
-  <li><%= school.name %></li>
+<% @person.schools.order('beginning_year').each do |school| %>
+  <li>
+    <%= school.name %> |
+    <%= school.beginning_year %>
+  </li>
 <% end %>
 </ul>
 
 <ul>
-  <% @person.events.each do |event| %>
-      <li><%= event.title %></li>
+  <% @person.events.order('date').each do |event| %>
+      <li>
+        <%= event.title %> |
+        <%= event.date %>
+      </li>
+
   <% end %>
 </ul>
 
