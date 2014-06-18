@@ -1,0 +1,22 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @person.name %>
+</p>
+
+<ul>
+<% @person.schools.each do |school| %>
+  <li><%= school.name %></li>
+<% end %>
+</ul>
+
+<ul>
+  <% @person.events.each do |event| %>
+      <li><%= event.title %></li>
+  <% end %>
+</ul>
+
+
+<%= link_to 'Edit', edit_person_path(@person) %> |
+<%= link_to 'Back', people_path %>

@@ -5,4 +5,6 @@ class School < ActiveRecord::Base
     greater_than_or_equal_to: 1900,
     less_than_or_equal_to: Time.now.year }
   validates :end_year, numericality: { greater_than: :beginning_year }
+
+  belongs_to :person
 end
