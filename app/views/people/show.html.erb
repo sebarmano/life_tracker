@@ -1,29 +1,32 @@
-<p id="notice"><%= notice %></p>
+<div class="row">
 
-<p>
-  <strong>Name:</strong>
-  <%= @person.name %>
-</p>
+  <p id="notice"><%= notice %></p>
 
-<ul>
-<% @person.schools.order('beginning_year').each do |school| %>
-  <li>
-    <%= school.name %> |
-    <%= school.beginning_year %>
-  </li>
-<% end %>
-</ul>
+  <p>
+    <strong>Name:</strong>
+    <%= @person.name %>
+  </p>
 
-<ul>
-  <% @person.events.order('date').each do |event| %>
-      <li>
-        <%= event.title %> |
-        <%= event.date %>
-      </li>
+  <ul>
+    <% @person.schools.order('beginning_year').each do |school| %>
+    <li>
+      <%= school.name %> |
+      <%= school.beginning_year %>
+    </li>
+    <% end %>
+  </ul>
 
-  <% end %>
-</ul>
+  <ul>
+    <% @person.events.order('date').each do |event| %>
+    <li>
+      <%= event.title %> |
+      <%= event.date %>
+    </li>
+
+    <% end %>
+  </ul>
 
 
-<%= link_to 'Edit', edit_person_path(@person) %> |
-<%= link_to 'Back', people_path %>
+  <%= link_to 'Edit', edit_person_path(@person) %> |
+  <%= link_to 'Back', people_path %>
+<div>
