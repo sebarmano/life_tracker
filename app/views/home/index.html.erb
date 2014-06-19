@@ -1,2 +1,12 @@
+<h1>LifeTracker</h1>
+<h2>We are watching you...</h2>
+
+
 <%= link_to 'Schools', schools_path %>
 <%= link_to 'Events', events_path %>
+
+<%= @events.last.title %>
+<%= @events.last.person.name %>
+
+<%= @schools.last.name %>
+<%= @schools.last.person.name %>
